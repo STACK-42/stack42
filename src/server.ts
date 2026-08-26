@@ -47,6 +47,20 @@ function isH3SwallowedErrorBody(body: string): boolean {
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const url = new URL(request.url);
+      const envObj = env as { ASSETS?: { fetch: (req: Request) => Promise<Response> } };
+
+      // Serve static assets from the ASSETS binding
+      if (
+        url.pathname.startsWith("/assets/") ||
+        url.pathname === "/favicon.png" ||
+        url.pathname === "/robots.txt"
+      ) {
+        if (envObj?.ASSETS) {
+          return envObj.ASSETS.fetch(request);
+        }
+      }
+
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);
