@@ -149,9 +149,9 @@ function Products() {
             <p className="mb-4 text-sm leading-relaxed text-graphite">
               {product.description}
             </p>
-            <div className="flex items-center gap-1.5 font-mono text-xs text-signal">
+            <div className="flex flex-nowrap items-center gap-1.5 font-mono text-xs text-signal">
               <span>&rarr;</span>
-              <span className="break-all">{product.link_label}</span>
+              <span className="min-w-0 whitespace-nowrap">{product.link_label}</span>
             </div>
           </a>
         ))}
