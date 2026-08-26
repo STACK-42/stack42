@@ -57,9 +57,9 @@ function Nav() {
           <img
             src={logo.url}
             alt="stack42"
-            className="h-7 w-auto"
-            width="120"
-            height="28"
+            className="h-8 w-auto"
+            width="138"
+            height="32"
           />
         </a>
         <div className="flex items-center gap-6 text-sm text-graphite">
