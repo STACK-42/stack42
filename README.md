@@ -1,38 +1,23 @@
-# Stack Ventures
+# stack42
 
-build this intial version of a website
+A small lab. We build tools and ship them.
 
+Welcome to Stack42, the proving/experimental playground for our digital adventures! We're a band of undergrad freshers and one "wise" recent grad who are still figuring things out. This organization is where we test our apps and collaborate on projects.
 
-Stack-24 
+## Projects
 
-About
-
-Welcome to Stack42, the proving/experimental playground for our hackathon adventures! We're a band of undergrad freshers and one "wise" recent grad who are still figuring things out. This organization is where we test our apps and collaborate on projects. Join us in exploring the future of development, one project at a time.
-
-Repositories
-
-projects
-
-csdecoded
-https://stack-42.github.io/csdecoded/
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/4f928411-79d3-4306-a403-a7547cdd2682).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- **csdecoded** — Notes and reference for computer science topics  
+  [stack-42.github.io/csdecoded/](https://stack-42.github.io/csdecoded/)
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+This project uses **bun** as its package manager. [Install bun](https://bun.sh/).
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+git clone https://github.com/STACK-42/stack42.git
+cd stack42
+bun install
+bun run dev
 ```
+
+For more details, see [CLAUDE.md](CLAUDE.md).
