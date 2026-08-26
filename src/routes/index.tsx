@@ -151,7 +151,7 @@ function Products() {
             </p>
             <div className="flex items-center gap-1.5 font-mono text-xs text-signal">
               <span>&rarr;</span>
-              <span>{product.link_label}</span>
+              <span className="break-all">{product.link_label}</span>
             </div>
           </a>
         ))}
