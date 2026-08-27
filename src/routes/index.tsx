@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import logo from "../assets/stack42-logo.png.asset.json";
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -55,7 +53,7 @@ function Nav() {
       <div className="mx-auto flex h-14 max-w-[760px] items-center justify-between px-6">
         <a href="/" className="flex items-center">
           <img
-            src={logo.url}
+            src="/stack42-logo.png"
             alt="stack42"
             className="h-8 w-auto"
             width="138"
