@@ -83,8 +83,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "stack42" },
       { property: "og:description", content: "A small lab. We build tools and ship them." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:url", content: "https://stack42.tech" },
+      { property: "og:image", content: "https://stack42.tech/og.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@stack42" },
+      { name: "twitter:image", content: "https://stack42.tech/og.png" },
     ],
     links: [
       {
