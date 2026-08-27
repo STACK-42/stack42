@@ -48,16 +48,31 @@ export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const url = new URL(request.url);
-      const envObj = env as { ASSETS?: { fetch: (req: Request) => Promise<Response> } };
+      const envObj = env as Record<string, unknown>;
 
       // Serve static assets from the ASSETS binding
       if (
         url.pathname.startsWith("/assets/") ||
         url.pathname === "/favicon.png" ||
-        url.pathname === "/robots.txt"
+        url.pathname === "/robots.txt" ||
+        url.pathname === "/_headers"
       ) {
-        if (envObj?.ASSETS) {
-          return envObj.ASSETS.fetch(request);
+        const assets = envObj.ASSETS as { fetch: (req: Request) => Promise<Response> } | undefined;
+        if (assets?.fetch) {
+          try {
+            const response = await assets.fetch(request);
+            // Add cache headers for static assets
+            if (response.ok) {
+              const headers = new Headers(response.headers);
+              headers.set("cache-control", "public, max-age=31536000, immutable");
+              return new Response(response.body, { status: response.status, headers });
+            }
+            return response;
+          } catch (assetError) {
+            console.error("ASSETS fetch error:", assetError);
+          }
+        } else {
+          console.warn("ASSETS binding not available");
         }
       }
 
