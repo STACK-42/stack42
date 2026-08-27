@@ -29,6 +29,13 @@ const products = [
     link: "https://stack-42.github.io/csdecoded/",
     link_label: "stack-42.github.io/csdecoded",
   },
+  {
+    name: "schoolers",
+    description: "Alumni directory and digital yearbook for FMSI graduates.",
+    status: "building",
+    link: "#",
+    link_label: "coming soon",
+  },
 ];
 
 function Index() {
@@ -159,7 +166,11 @@ function Products() {
 }
 
 function StatusDot({ status }: { status: string }) {
-  const color = status === "live" ? "bg-signal" : "bg-hairline";
+  const colorMap: Record<string, string> = {
+    live: "bg-signal",
+    building: "bg-amber-500",
+  };
+  const color = colorMap[status] || "bg-hairline";
   return (
     <span
       className={`inline-block h-1.5 w-1.5 rounded-full ${color}`}
