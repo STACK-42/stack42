@@ -51,13 +51,13 @@ export default {
       const envObj = env as Record<string, unknown>;
 
       // Serve static assets from the ASSETS binding
-      if (
-        url.pathname.startsWith("/assets/") ||
-        url.pathname === "/favicon.png" ||
-        url.pathname === "/robots.txt" ||
-        url.pathname === "/_headers"
-      ) {
-        const assets = envObj.ASSETS as { fetch: (req: Request) => Promise<Response> } | undefined;
+      const pathname = url.pathname;
+      const isStaticAsset =
+        pathname.startsWith("/assets/") ||
+        /\.(png|jpg|jpeg|gif|svg|ico|css|js|json|txt|webp)$/i.test(pathname);
+
+      if (isStaticAsset) {
+        const assets = envObj["ASSETS"] as { fetch: (req: Request) => Promise<Response> } | undefined;
         if (assets?.fetch) {
           try {
             const response = await assets.fetch(request);
