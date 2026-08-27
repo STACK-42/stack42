@@ -60,7 +60,7 @@ function Nav() {
       <div className="mx-auto flex h-14 max-w-[760px] items-center justify-between px-6">
         <a href="/" className="flex items-center">
           <img
-            src="/stack42-logo.png"
+            src="/logo.jpg"
             alt="stack42"
             className="h-8 w-auto"
             width="138"
