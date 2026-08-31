@@ -7,7 +7,7 @@ Welcome to Stack42, the proving/experimental playground for our digital adventur
 ## Projects
 
 - **csdecoded** — Notes and reference for computer science topics  
-  [stack-42.github.io/csdecoded/](https://stack-42.github.io/csdecoded/)
+  [csdecoded.stack42.tech](http://csdecoded.stack42.tech/)
 
 ## Development
 

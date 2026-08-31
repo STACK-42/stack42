@@ -26,8 +26,8 @@ const products = [
     name: "csdecoded",
     description: "Notes and reference for computer science topics.",
     status: "live",
-    link: "https://stack-42.github.io/csdecoded/",
-    link_label: "stack-42.github.io/csdecoded",
+    link: "http://csdecoded.stack42.tech/",
+    link_label: "csdecoded.stack42.tech",
   },
   {
     name: "schoolers",
