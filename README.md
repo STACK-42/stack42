@@ -8,6 +8,10 @@ Welcome to Stack42, the proving/experimental playground for our digital adventur
 
 - **csdecoded** — Notes and reference for computer science topics  
   [csdecoded.stack42.tech](http://csdecoded.stack42.tech/)
+- **schoolers** — Alumni directory and community network for FMSI and School of Mathematical Sciences & Informatics graduates  
+  [schoolers.space](https://schoolers.space/)
+- **aeset** — After Effects project scaffolding tool. CLI for setting up motion design projects with studio-standard folder structure  
+  [aeset.stack42.tech](http://aeset.stack42.tech/)
 
 ## Development
 

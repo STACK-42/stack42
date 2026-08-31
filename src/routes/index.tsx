@@ -31,10 +31,17 @@ const products = [
   },
   {
     name: "schoolers",
-    description: "Alumni directory and digital yearbook for FMSI graduates.",
-    status: "building",
-    link: "#",
-    link_label: "coming soon",
+    description: "Alumni directory and community network for FMSI and School of Mathematical Sciences & Informatics graduates.",
+    status: "live",
+    link: "https://schoolers.space/",
+    link_label: "schoolers.space",
+  },
+  {
+    name: "aeset",
+    description: "After Effects project scaffolding tool. CLI for setting up motion design projects with studio-standard folder structure.",
+    status: "live",
+    link: "http://aeset.stack42.tech/",
+    link_label: "aeset.stack42.tech",
   },
 ];
 
