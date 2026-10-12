@@ -12,6 +12,8 @@ Welcome to Stack42, the proving/experimental playground for our digital adventur
   [schoolers.space](https://schoolers.space/)
 - **aeset** — After Effects project scaffolding tool. CLI for setting up motion design projects with studio-standard folder structure  
   [aeset.stack42.tech](http://aeset.stack42.tech/)
+- **peeko** — The to-do list that checks itself. A local-first macOS menu bar app that ticks off your daily habits (reading, focus, code, sleep, writing) when it sees the evidence  
+  [peeko.stack42.tech](https://peeko.stack42.tech/)
 
 ## Development
 

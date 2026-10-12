@@ -43,6 +43,13 @@ const products = [
     link: "http://aeset.stack42.tech/",
     link_label: "aeset.stack42.tech",
   },
+  {
+    name: "peeko",
+    description: "The to-do list that checks itself. A local-first macOS menu bar app that ticks off your daily habits (reading, focus, code, sleep, writing) when it sees the evidence.",
+    status: "live",
+    link: "https://peeko.stack42.tech/",
+    link_label: "peeko.stack42.tech",
+  },
 ];
 
 function Index() {
