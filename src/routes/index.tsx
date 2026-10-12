@@ -101,7 +101,28 @@ const products: Product[] = [
     iconScale: 1.25,
     screenshot: "/apps/peeko/screenshot.jpg",
   },
+  {
+    name: "relaunch",
+    head: "re",
+    tail: "launch",
+    category: "MAC LAUNCHER",
+    accent: "#6a3cf0",
+    accentDark: "#a68bff",
+    tags: ["MACOS", "OPEN SOURCE"],
+    description:
+      "The paged app grid, back on your Mac. A free, open-source launcher that restores your old Launchpad layout, folders and all.",
+    link: "https://relaunch.stack42.tech/",
+    link_label: "relaunch.stack42.tech",
+    icon: "/apps/relaunch/icon.png",
+    iconScale: 1.22,
+    screenshot: "/apps/relaunch/screenshot.jpg",
+  },
 ];
+
+// Lineup cells share borders, so each one draws only its bottom and (unless it ends a
+// row) right edge.
+const cellBorders =
+  "border-b border-hairline sm:max-lg:[&:nth-child(odd)]:border-r lg:[&:not(:nth-child(3n))]:border-r";
 
 const label = "font-mono text-xs uppercase tracking-[0.16em] text-graphite";
 
@@ -235,11 +256,11 @@ function Hero() {
 
 function Lineup() {
   return (
-    <section id="products" className="grid scroll-mt-16 sm:grid-cols-2 lg:grid-cols-4">
+    <section id="products" className="grid scroll-mt-16 sm:grid-cols-2 lg:grid-cols-3">
       {products.map((product, i) => (
         <article
           key={product.name}
-          className="accent-scope group relative flex animate-fade-up flex-col border-b border-hairline transition-colors duration-300 hover:bg-[var(--hover)] sm:border-r lg:border-b-0 lg:last:border-r-0"
+          className={`accent-scope group relative flex animate-fade-up flex-col transition-colors duration-300 hover:bg-[var(--hover)] ${cellBorders}`}
           style={
             {
               "--accent-light": product.accent,
@@ -312,7 +333,34 @@ function Lineup() {
           </div>
         </article>
       ))}
+      {products.length % 3 !== 0 && <NextUp delayMs={500 + products.length * 110} />}
     </section>
+  );
+}
+
+// Fills the empty grid slot: there's always another one on the way.
+function NextUp({ delayMs }: { delayMs: number }) {
+  return (
+    <div
+      className={`hidden animate-fade-up flex-col items-start justify-end gap-4 bg-[repeating-linear-gradient(135deg,transparent_0_14px,var(--hover)_14px_15px)] px-6 py-8 sm:flex ${cellBorders}`}
+      style={delay(delayMs)}
+    >
+      <span className="font-mono text-xs text-graphite">
+        {String(products.length + 1).padStart(2, "0")} / NEXT
+      </span>
+      <p className="font-display text-[34px] font-extrabold leading-none tracking-[-0.03em] text-graphite">
+        cooking
+        <span className="animate-pulse text-signal">_</span>
+      </p>
+      <a
+        href="https://github.com/stack-42"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-mono text-xs tracking-[0.14em] text-ink transition-colors hover:text-signal"
+      >
+        WATCH ON GITHUB ↗
+      </a>
+    </div>
   );
 }
 
@@ -360,7 +408,7 @@ function WhatWeDo() {
   return (
     <section
       id="what-we-do"
-      className="grid gap-6 border-t border-hairline px-4 py-16 sm:px-8 md:grid-cols-[240px_1fr] md:gap-10"
+      className="grid gap-6 px-4 py-16 sm:px-8 md:grid-cols-[240px_1fr] md:gap-10"
     >
       <h2 className={label}>[03] WHO WE ARE</h2>
       <div className="max-w-[720px] space-y-4 [text-wrap:pretty]">

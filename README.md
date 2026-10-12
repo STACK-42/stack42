@@ -14,6 +14,8 @@ stack42 is our experimental playground. We're a band of undergrad freshers and o
   [aeset.stack42.tech](http://aeset.stack42.tech/)
 - **peeko** — The to-do list that checks itself. A local-first macOS menu bar app that ticks off your daily habits (reading, focus, code, sleep, writing) when it sees the evidence  
   [peeko.stack42.tech](https://peeko.stack42.tech/)
+- **relaunch** — The paged app grid, back on your Mac. A free, open-source launcher that restores your old Launchpad layout, folders and all  
+  [relaunch.stack42.tech](https://relaunch.stack42.tech/)
 
 ## Development
 
