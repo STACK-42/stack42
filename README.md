@@ -2,7 +2,7 @@
 
 A small lab. We build tools and ship them.
 
-Welcome to Stack42, the proving/experimental playground for our digital adventures! We're a band of undergrad freshers and one "wise" recent grad who are still figuring things out. This organization is where we test our apps and collaborate on projects.
+stack42 is our experimental playground. We're a band of undergrad freshers and one "wise" recent grad who are still figuring things out. This organization is where we test our apps and collaborate on projects.
 
 ## Projects
 

@@ -44,9 +44,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-paper px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-ink">
-          This page didn't load
-        </h1>
+        <h1 className="text-xl font-semibold tracking-tight text-ink">This page didn't load</h1>
         <p className="mt-2 text-sm text-graphite">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
@@ -107,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@300;800;900&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap",
       },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
