@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
         content: "A small lab. We build tools and ship them.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
