@@ -114,7 +114,6 @@ const products: Product[] = [
     link: "https://relaunch.stack42.tech/",
     link_label: "relaunch.stack42.tech",
     icon: "/apps/relaunch/icon.png",
-    iconScale: 1.22,
     screenshot: "/apps/relaunch/screenshot.jpg",
   },
 ];
